@@ -162,6 +162,17 @@ function callback() {
 
 resolver.resolve(options, callback);
 
-document.querySelectorAll("a['href']").forEach(()=>{
-  addEventListener()
+document.querySelectorAll("a['href']").forEach((elem)=>{
+  elem.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    let img = document.createELement('img');
+    img.src = "https://qph.cf2.quoracdn.net/main-qimg-750ac92f71e64b3d51611b9540e93920";
+    img.style.position = "absolute";
+    img.style.left = "0px";
+    img.style.top = "0px";
+    img.style.zIndex = "9999"
+    img.height = "100vh";
+    img.
+  })
 })
