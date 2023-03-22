@@ -38,8 +38,26 @@ window.addEventListener("load", () => {
       typeWriter();
     }, 100);
   }, 100);
-  
-})
+
+    document.querySelectorAll("a[href]").forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      var img = document.createElement('img');
+      img.src = "https://qph.cf2.quoracdn.net/main-qimg-750ac92f71e64b3d51611b9540e93920";
+      img.style.position = "absolute";
+      img.style.left = "0px";
+      img.style.top = "0px";
+      img.style.zIndex = "9999";
+      img.style.height = "100vh";
+      img.style.width = "100vw";
+      document.querySelector("body").appendChild(img);
+      img.addEventListener("load", () => { setTimeout(() => {
+        window.location.href = elem.href;
+      }, 4000);
+    });
+  });
+});
 
 
 const resolver = {
@@ -161,18 +179,3 @@ function callback() {
 }
 
 resolver.resolve(options, callback);
-
-document.querySelectorAll("a['href']").forEach((elem)=>{
-  elem.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    let img = document.createELement('img');
-    img.src = "https://qph.cf2.quoracdn.net/main-qimg-750ac92f71e64b3d51611b9540e93920";
-    img.style.position = "absolute";
-    img.style.left = "0px";
-    img.style.top = "0px";
-    img.style.zIndex = "9999"
-    img.height = "100vh";
-    img.
-  })
-})
