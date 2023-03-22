@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:10;
+    box-sizing:border-box;
+}
+
+@font-face {
+  font-family: "Avapore";
+  src: local("Avapore"),
+    url("Avapore.otf") format("opentype") tech(color-COLRv1), url("Avapore.otf")
+      format("opentype"), url("Avapore.woff") format("woff");
+}
+
+body{
+    min-height:100vh;
+    display:grid;
+    place-content:center;
+    font-family:'Avapore';
+    color:#C0C0C0;
+}
+
+form{
+    width:90vw;
+    max-width:768px;
+    border:1px solid #ddd;
+    padding:3vw;
+    display:flex;
+    flex-direction:column;
+    border-radius:5px;
+}
+
+label{
+    margin-bottom:15px;
+    position:relative;
+    border-bottom:1px solid #ddd;
+}
+
+button{
+    padding:15px 0px; 
+    margin-top:20px;
+    background:black;
+    color:#fff;
+    border:1px solid white;
+    cursor:pointer;
+    border-radius:3px;
+}

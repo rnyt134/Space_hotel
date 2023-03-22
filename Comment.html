@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+
+    <link href="comment.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Comment</h1>
+    <div class = "comment">
+        <form>
+             <input type="button" value="Go back!" onclick="history.back()">
+            <label for="message">
+                Message 
+                <textarea type = "text" id="message" name="message">    </textarea>
+            </label> 
+            
+            <label>
+            <input type="radio" name="type" value="1" checked>
+            Complaint
+            </label>
+
+            <br>
+
+            <label>
+                <input type="radio" name="type" value="2">
+                Suggestion
+            </label>
+
+            <button>Send</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+:root {
+  --black:white;
+  --grey:grey;
+  
+}
+
+body {
+  background-image: url("background.jpg");
+  background-repeat: none;
+}
+nav {
+  border-radius: 15px;
+/*   background-color: #333; */
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+@font-face {
+  font-family: "Avapore";
+  src: local("Avapore"),
+    url("Avapore.otf") format("opentype") tech(color-COLRv1), url("Avapore.otf")
+      format("opentype"), url("Avapore.woff") format("woff");
+}
+
+nav ul li a {
+  display: block;
+  font-family: "Avapore";
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color .3s ease-in-out;
+}
+
+
+
+
+nav ul li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+nav ul li a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: beige;
+  z-index: -1;
+  transition: transform .3s ease;
+  border-radius: 25px;
+}
+nav ul li a {
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+
+
+/* 
+nav ul li a:hover {
+  background-color: #111;
+} */
+
+/* nav ul li a.active {
+  background-color: 'orange';
+} */
+
+fieldset {
+  border: none;
+  padding: 0;
+  position: absolute;
+  margin-top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+label {
+  padding:5px 0px;
+}
+input[type=text] {
+  font-size: 26px;
+  border: none;
+  outline: none;
+  border-bottom: 5px solid var(--black);
+  padding: 5px 0;
+  transition: border-color 300ms;
+  background-color: transparent;
+ }
+
+[type="text"]:focus {
+  border-color: black;
+}
+
+
+[type="text"] + label {
+  font-family: 'Avapore';
+  font-size: 26px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--grey);
+  pointer-events: none;
+  transform-origin: left;
+  transition: transform 300ms;
+}
+
+[type="text"]:focus + label {
+  transform: scale(0.6) translateY(-40px);
+}
+
+#quote {
+  color: white;
+/*   margin-top: 100px; */
+  font-size: 25px;
+  width: 50%;
+  font-family: 'Avapore';
+}
+
+#marks {
+  margin-top: 50px;
+  filter: invert();
+  width: 20px;
+  height: 20px;
+}
+
+#marks1 {
+  filter: invert();
+  width: 20px;
+  height: 20px;
+  margin-left: 50%;
+}
+
+@keyframes mymove {
+  from {left: 0px;opacity: 0%; }
+  to {left: 600px; opacity: 100%;}
+}
+
+#elon {
+  position: relative;
+  opacity: 0%;
+  width: 20%;
+  height: 20%;
+  animation: 5s ease-in-out mymove 4s forwards;
+}
+
